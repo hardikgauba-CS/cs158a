@@ -18,6 +18,18 @@ This project implements a TCP client-server system that exchanges variable-lengt
 cd a1
 python3 myvlserver.py
 
-we will see something like <img width="562" alt="server_output" src="https://github.com/user-attachments/assets/b780f594-32e3-49f3-80d6-4f31ee594789" />
+Server will response
+Server listening on localhost:12345
+
 for Client it will be something like this in terminal
-<img width="563" alt="client_output" src="https://github.com/user-attachments/assets/2afcb514-1295-4156-a59e-17c79a2d247f" />
+Input lowercase sentence: 10helloworld
+From Server: HELLOWORLD
+
+after running the client file Server will response with
+Server listening on localhost:12345
+Connected from ('127.0.0.1', 55555)
+msg_len: 10
+processed: helloworld
+msg_len_sent: 10
+Connection closed
+
