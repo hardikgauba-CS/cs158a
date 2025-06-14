@@ -29,7 +29,7 @@ after running the client file Server will response with
 Server listening on localhost:12345
 Connected from ('127.0.0.1', 55555)
 msg_len: 10
-processed: helloworld
+processed: 10helloworld
 msg_len_sent: 10
 Connection closed
 
