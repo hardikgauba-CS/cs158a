@@ -9,6 +9,11 @@ This project implements a TCP client-server system that exchanges variable-lengt
 - The server stays running, and the client exits after receiving the response.
 
 ---
+### 💻 Example Server Output
+![Server Output](server_output.png)
+
+### 📲 Example Client Output
+![Client Output](client_output.png)
 
 ## 🛠 How to Run
 
