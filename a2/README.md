@@ -27,11 +27,23 @@ python3 mychatserver.py
 python3 mychatclient.py
 
 ### Server
-<img width="855" alt="Screenshot 2025-06-28 at 8 09 35 PM" src="https://github.com/user-attachments/assets/6ad57178-3dad-40a0-b312-f5fa4dffa967" />
+<p align="center"> <img width="800" alt="Server Screenshot" src="https://github.com/user-attachments/assets/6ad57178-3dad-40a0-b312-f5fa4dffa967" /> </p>
 ### Clients
-Client1
-<img width="461" alt="Screenshot 2025-06-28 at 8 09 45 PM" src="https://github.com/user-attachments/assets/25e5ebcc-6ff5-414a-b210-1eccc93ecfc7" />
-Client2
-<img width="471" alt="Screenshot 2025-06-28 at 8 09 54 PM" src="https://github.com/user-attachments/assets/3912892a-94a0-4812-85d5-5055fda1fb47" />
-Client3
-<img width="482" alt="Screenshot 2025-06-28 at 8 10 01 PM" src="https://github.com/user-attachments/assets/ad7ca6eb-9c41-4866-ab82-bf55967bcf7e" />
+<table width="100%" style="table-layout: fixed;">
+  <tr>
+    <td align="center"><strong>Client 1</strong></td>
+    <td align="center"><strong>Client 2</strong></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/25e5ebcc-6ff5-414a-b210-1eccc93ecfc7" width="100%"/></td>
+    <td><img src="https://github.com/user-attachments/assets/3912892a-94a0-4812-85d5-5055fda1fb47" width="100%"/></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Client 3</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/ad7ca6eb-9c41-4866-ab82-bf55967bcf7e" width="100%"/></td>
+    <td></td>
+  </tr>
+</table>
