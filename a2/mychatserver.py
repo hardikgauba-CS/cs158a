@@ -1,51 +1,46 @@
-import socket
-import threading
+import socket, threading
 
-HOST = '127.0.0.1'
-PORT = 12345
-BUF_SIZE = 1024
+HOST, PORT = "127.0.0.1", 12345
+BUF = 1024
+clients = {}                     # { sock : port }
 
-clients = {}
-
-def broadcast(message, sender_sock):
-    for client_sock in clients:
-        if client_sock != sender_sock:
-            try:
-                client_sock.send(message.encode())
-            except:
-                client_sock.close()
-
-def handle_client(client_sock, client_addr):
-    print(f"New connection from {client_addr}")
-    clients[client_sock] = client_addr[1]
-
-    while True:
+def broadcast(line: str, sender):
+    line += "\n"                 # ← delimiter so clients can split packets
+    for s in list(clients):
+        if s is sender:          # ← do NOT send back to the originator
+            continue
         try:
-            msg = client_sock.recv(BUF_SIZE).decode()
-            if msg.lower() == "exit":
-                print(f"Client {client_addr} disconnected.")
-                del clients[client_sock]
-                client_sock.close()
-                break
-            full_msg = f"{client_addr[1]}: {msg}"
-            print(full_msg)
-            broadcast(full_msg, client_sock)
+            s.sendall(line.encode())
         except:
-            if client_sock in clients:
-                del clients[client_sock]
-            client_sock.close()
-            break
+            s.close()
+            clients.pop(s, None)
 
-def start_server():
-    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server.bind((HOST, PORT))
-    server.listen()
-    print(f"Server listening on {HOST}:{PORT}")
+def client_loop(s, addr):
+    clients[s] = addr[1]
+    print(f"New connection from {addr}")
+    try:
+        while True:
+            data = s.recv(BUF).decode()
+            if not data:
+                break            # client crashed
+            if data.lower() == "exit":
+                break
+            msg = f"{addr[1]}: {data}"
+            print(msg)
+            broadcast(msg, s)
+    finally:
+        s.close()
+        clients.pop(s, None)
+        print(f"Client {addr} disconnected.")
 
-    while True:
-        client_sock, client_addr = server.accept()
-        thread = threading.Thread(target=handle_client, args=(client_sock, client_addr))
-        thread.start()
+def main():
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as srv:
+        srv.bind((HOST, PORT))
+        srv.listen()
+        print(f"Server listening on {HOST}:{PORT}")
+        while True:
+            c, a = srv.accept()
+            threading.Thread(target=client_loop, args=(c, a), daemon=True).start()
 
 if __name__ == "__main__":
-    start_server()
+    main()
