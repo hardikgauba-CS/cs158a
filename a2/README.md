@@ -25,9 +25,10 @@ python3 mychatserver.py
 ### 🖥️ 2. Start the Client
 
 python3 mychatclient.py
-Server
+
+### Server
 <img width="855" alt="Screenshot 2025-06-28 at 8 09 35 PM" src="https://github.com/user-attachments/assets/6ad57178-3dad-40a0-b312-f5fa4dffa967" />
-Clients
+### Clients
 Client1
 <img width="461" alt="Screenshot 2025-06-28 at 8 09 45 PM" src="https://github.com/user-attachments/assets/25e5ebcc-6ff5-414a-b210-1eccc93ecfc7" />
 Client2
