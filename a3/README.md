@@ -33,8 +33,10 @@ a3/
 
 Each `config.txt` file must contain **two lines**:
 
-127.0.0.1,5001 # This node’s server (receive) IP and port
-127.0.0.1,5002 # This node’s client (send) neighbor IP and port
+```txt
+127.0.0.1,5001  # This node’s server (receive) IP and port  
+127.0.0.1,5002  # This node’s client (send) neighbor IP and port
+```
 
 
 Each node must point to its neighbor to form a **closed ring**.
