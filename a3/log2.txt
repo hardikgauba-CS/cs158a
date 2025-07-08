@@ -1,0 +1,14 @@
+23:24:22 Process UUID = 2cc9050d-d32f-4dbd-83c7-57816d6f7184
+23:24:22 Server listening on 127.0.0.1:5002
+23:24:22 Connection refused by 127.0.0.1:5003 — retrying in 5s
+23:24:25 Accepted connection from ('127.0.0.1', 60408)
+23:24:25 Received: uuid=5b129123-6a66-4c66-99e7-d9ea7da6f5ee, flag=0, greater, 0
+23:24:27 Connection refused by 127.0.0.1:5003 — retrying in 5s
+23:24:32 Connection refused by 127.0.0.1:5003 — retrying in 5s
+23:24:37 Connected to server at 127.0.0.1:5003
+23:24:37 Sent: uuid=2cc9050d-d32f-4dbd-83c7-57816d6f7184, flag=0
+23:24:37 Sent: uuid=5b129123-6a66-4c66-99e7-d9ea7da6f5ee, flag=0
+23:24:37 Received: uuid=5b129123-6a66-4c66-99e7-d9ea7da6f5ee, flag=1, greater, 0
+23:24:37 Acknowledged leader → 5b129123-6a66-4c66-99e7-d9ea7da6f5ee
+23:24:37 Sent: uuid=5b129123-6a66-4c66-99e7-d9ea7da6f5ee, flag=1
+23:24:48 Terminating after convergence (idle 11.0s)
