@@ -17,18 +17,19 @@ the node with the **highest UUID** as the leader.
 
 ## 📁 Folder Structure
 
+## 📁 Folder Structure
+
+```
 a3/
-├── myleprocess.py # Main Python script
-├── config1.txt # Server & client port for node 1
-├── config2.txt # For node 2
-├── config3.txt # For node 3
-├── log1.txt # Output log for node 1
-├── log2.txt # Output log for node 2
-├── log3.txt # Output log for node 3
-└── README.md # This file
-
-
----
+├── myleprocess.py     # Main Python script
+├── config1.txt        # Server & client port for node 1
+├── config2.txt        # For node 2
+├── config3.txt        # For node 3
+├── log1.txt           # Output log for node 1
+├── log2.txt           # Output log for node 2
+├── log3.txt           # Output log for node 3
+└── README.md          # This file
+```
 
 ## ⚙️ Configuration
 
